@@ -8,17 +8,19 @@
 </head>
 <body>
 
-    <header>
+     <header>
         <h1 class="logo">
             <a href="index.html">
                 <img src="./Logo/layercraft studio logo.png" class="header-logo" alt="Layercraft Studio Home">
             </a>
-    <nav>
-        <a href="index.html">Home</a>
-        <a href="#">Store</a>
-        <a href="contact.html">Contact</a>
-        <button id="dark-toggle">🌙</button>
-  </nav>
+    <nav id="navbar-links"> <!-- 1. ADD THIS ID -->
+    <a href="index.html">Home</a>
+    <a href="store.html">Store</a>
+    <a href="contact.html">Contact</a>
+    <button id="dark-toggle">🌙</button>
+    <!-- 2. ADD THIS HAMBURGER BUTTON -->
+    <button id="menu-toggle" onclick="toggleMenu()">☰</button> 
+</nav>
 </header>
 
         </h1>
@@ -27,9 +29,10 @@
     </header>
 
 <main class="contact-container">
-    <h2>Get In Touch</h2>
-    <p>We'd love to hear from you! Send us a message using the form below or reach out via email.</p>
+    <h2>Get In Touch</h2> 
+    <p> We'd love to hear from you! Send us a message using the form below or reach out via email.</p>
 
+    
     <div class="contact-info">
         <p><strong>Email:</strong> Logangilluley@gmail.com</p>
         <p><strong>Location:</strong> Neath, UK</p>
