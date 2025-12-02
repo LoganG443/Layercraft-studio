@@ -30,10 +30,7 @@ body {
 header {
     display: flex;
     align-items: center; 
-    /* This pushes the first child (logo div) to the far left, 
-       and the second child (nav block) to the far right. */
     justify-content: space-between; 
-
     background-color: var(--card); 
     padding: 10px 20px; 
     margin: 0; 
@@ -71,9 +68,22 @@ header nav a {
     padding: 6px 10px;
     cursor: pointer;
     border-radius: 4px;
-    /* Add margin to separate it from the 'Contact' link */
     margin-left: 15px; 
 }
+
+/* --- NEW: Style for the Hamburger Menu Button (Hidden by default) --- */
+#menu-toggle {
+    display: none; /* Hide hamburger menu by default on large screens */
+    border: none;
+    background: none;
+    font-size: 1.5em;
+    cursor: pointer;
+    color: var(--text);
+    padding: 0;
+    margin-left: 10px;
+}
+/* --- END NEW --- */
+
 
 /* Hero */
 .hero {
@@ -89,6 +99,7 @@ header nav a {
     grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
     gap: 20px;
     padding: 25px;
+    justify-content: center; /* Ensures the grid items are centered on the page */
 }
 
 .product-card {
@@ -115,13 +126,46 @@ header nav a {
     font-weight: bold;
 }
 
-/* Responsive improvements */
+/* Responsive improvements for iPhones/Small Screens */
 @media (max-width: 500px) {
-    /* With the display: flex changes above, this original logic 
-       should work perfectly now. The links will disappear, 
-       but the toggle button will correctly position to the far right. */
     header nav a {
-        display: none;
+        display: none; /* Hides the links normally on small screens */
+    }
+    
+    /* Shows the hamburger icon on iPhones */
+    #menu-toggle {
+        display: block; 
+    }
+
+    /* When the "responsive" class is added via JavaScript, change the layout */
+    nav.responsive {
+        flex-direction: column; /* Stack the items vertically */
+        position: absolute;
+        top: 100px; /* Adjust this value if your header height changes */
+        right: 0;
+        background-color: var(--card);
+        width: 100%;
+        box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+        padding-bottom: 10px;
+    }
+    
+    nav.responsive a {
+        display: block; /* Make the hidden links visible */
+        text-align: right;
+        padding: 10px 20px;
+        width: 100%;
+    }
+
+    /* Keep the toggle button in its place when menu is open */
+    nav.responsive #dark-toggle {
+        display: block; 
+        margin-right: 20px;
+        margin-left: auto; /* Push to the right edge of the dropdown menu */
+    }
+
+    /* Hide the hamburger icon when the menu is active */
+    nav.responsive #menu-toggle {
+         display: none;
     }
     
 }
