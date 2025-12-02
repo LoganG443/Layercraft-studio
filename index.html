@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ForgePrints</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header>
+  <h1 class="logo"> <a href="index.html">
+    <img src="./Logo/layercraft studio logo.png" class="header-logo" alt="Layercraft Studio Home">
+</a>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="#">Store</a>
+    <a href="contact.html">Contact</a>
+    <button id="dark-toggle">🌙</button>
+  </nav>
+</header>
+
+<section class="hero">
+  <h2>Custom 3D Prints Built For You</h2>
+  <p>High-quality, durable, and tailored. Designed, printed, and shipped with care.</p>
+</section>
+
+<section class="product-grid">
+  <!-- Updated Product Card 1 -->
+  <div class="product-card" onclick="openProduct('product1.html')">
+    <div class="index-image-wrapper"> <!-- Added a new wrapper class -->
+        <img src=".\Images\ironman.png" alt="Iron Mask MK85">
+    </div>
+    <h3>Iron Mask MK85</h3>
+    <p class="price">£45</p>
+  </div>
+
+  <!-- Updated Product Card 2 -->
+  <div class="product-card" onclick="openProduct('product2.html')">
+    <div class="index-image-wrapper"> <!-- Added a new wrapper class -->
+        <img src=".\Images\bucky.png" alt="Bucky Arm">
+    </div>
+    <h3>Bucky Arm (Mini Model)</h3>
+    <p class="price">£28</p>
+  </div>
+
+  <!-- Updated Product Card 3 -->
+  <div class="product-card" onclick="openProduct('product3.html')">
+    <div class="index-image-wrapper"> <!-- Added a new wrapper class -->
+        <img src="images/billy clubs.png" alt="Product 3">
+    </div>
+    <h3>Custom Cosplay Commission</h3>
+    <p class="price">£36</p>
+  </div>
+</section>
+
+<script src="script.js"></script>
+</body>
+</html>

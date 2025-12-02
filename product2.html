@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bucky Arm - ForgePrints</title> <!-- Added a specific title -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <header>
+        <h1 class="logo">
+            <a href="index.html">
+                <img src="./Logo/layercraft studio logo.png" class="header-logo" alt="Layercraft Studio Home">
+            </a>
+        </h1>
+        <button id="dark-toggle">🌙</button>
+        <button onclick="history.back()" class="back-btn">← Back</button>
+    </header>
+
+<!-- The section where the product details are laid out -->
+<section class="product-page">
+    
+    <!-- This is the crucial WRAPPER that controls the image size -->
+    <div class="image-wrapper">
+        <img src=".\Images\bucky.png" class="product-detail-image" alt="Bucky Barnes Arm">
+    </div>
+
+    <!-- This div wraps the text and button for consistent styling -->
+    <div class="product-info">
+        <p>High-quality 3D printed Bucky Barnes arm with premium finish.</p>
+        <p class="price">£28.00</p>
+        <button class="buy-btn" onclick="checkout()">Buy Now</button>
+    </div>
+
+</section>
+<!-- End of product page section -->
+
+<script>
+function checkout() {
+  alert("Stripe checkout goes here. Backend required.");
+}
+</script>
+
+<!-- Link to the script.js file with the dark mode logic -->
+<script src="script.js"></script>
+
+
+</body>
+</html>

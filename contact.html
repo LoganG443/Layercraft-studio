@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us - ForgePrints</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <header>
+        <h1 class="logo">
+            <a href="index.html">
+                <img src="./Logo/layercraft studio logo.png" class="header-logo" alt="Layercraft Studio Home">
+            </a>
+        </h1>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="#">Store</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+        <button id="dark-toggle">🌙</button>
+    </header>
+
+<main class="contact-container">
+    <h2>Get In Touch</h2>
+    <p>We'd love to hear from you! Send us a message using the form below or reach out via email.</p>
+
+    <div class="contact-info">
+        <p><strong>Email:</strong> Logangilluley@gmail.com</p>
+        <p><strong>Location:</strong> Neath, UK</p>
+    </div>
+
+    <!-- Simple Contact Form -->
+    <form class="contact-form" action="#" method="POST">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" rows="1" required></textarea>
+
+        <button type="submit" class="buy-btn">Send Message</button>
+    </form>
+
+</main>
+
+<!-- Link to the script.js file with the dark mode logic -->
+<script src="script.js"></script>
+
+</body>
+</html>
