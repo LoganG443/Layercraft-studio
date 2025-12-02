@@ -29,30 +29,38 @@ body {
 /* Header */
 header {
     display: flex;
-    align-items: center; /* Vertically centers the logo and the button */
-    justify-content: space-between; /* Puts logo on the left, button on the right */
-    /* *** KEY CHANGE HERE: Use var(--card) instead of a fixed color *** */
+    align-items: center; 
+    /* This pushes the first child (logo div) to the far left, 
+       and the second child (nav block) to the far right. */
+    justify-content: space-between; 
+
     background-color: var(--card); 
-    padding: 10px 20px; /* Optional: some space around the elements */
-    margin: 0; /* Ensures the header touches the edge of the screen */
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Optional: add subtle shadow */
+    padding: 10px 20px; 
+    margin: 0; 
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1); 
+}
+
+/* The nav itself needs its own flexbox to arrange the links and the button inside it */
+nav {
+    display: flex;
+    align-items: center; /* Ensures the links and the button align vertically in the middle */
 }
 
 /* Style the new logo class */
 .header-logo {
-    height: 80px; /* Set a fixed height that looks good for a logo */
-    width: auto; /* This maintains the original aspect ratio and prevents stretching */
-    display: block; /* Helps with layout consistency */
+    height: 80px; 
+    width: auto; 
+    display: block; 
 }
 
-/* Remove default margin from the H1 tag, which often adds extra space */
+/* Remove default margin from the H1 tag */
 header h1.logo {
     margin: 0;
     padding: 0;
 }
 
 header nav a {
-    margin: 0 10px;
+    margin: 0 10px; /* Space between the Home, Store, and Contact links */
     color: var(--text);
     text-decoration: none;
 }
@@ -63,6 +71,8 @@ header nav a {
     padding: 6px 10px;
     cursor: pointer;
     border-radius: 4px;
+    /* Add margin to separate it from the 'Contact' link */
+    margin-left: 15px; 
 }
 
 /* Hero */
@@ -107,12 +117,13 @@ header nav a {
 
 /* Responsive improvements */
 @media (max-width: 500px) {
+    /* With the display: flex changes above, this original logic 
+       should work perfectly now. The links will disappear, 
+       but the toggle button will correctly position to the far right. */
     header nav a {
         display: none;
     }
-    header nav button {
-        margin-left: auto;
-    }
+    
 }
 
 /* --- Product Page Layout (Ensures Consistent Image Scaling) --- */
@@ -176,10 +187,11 @@ header nav a {
     .image-wrapper {
         width: 250px;  /* Make sure these values are present and saved */
         height: 250px; 
-        /* ... rest of the styles ... */
     }
+}
 
-    .contact-container {
+/* Contact Page Specific Styles */
+.contact-container {
     max-width: 600px;
     margin: 40px auto;
     padding: 20px;
@@ -231,5 +243,5 @@ header nav a {
     .contact-container {
         margin: 20px;
     }
-}
+    
 }
