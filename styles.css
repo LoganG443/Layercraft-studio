@@ -76,13 +76,16 @@ header nav a {
     display: none; /* Hide hamburger menu by default on large screens */
     border: none;
     background: none;
-    font-size: 1.5em;
+    
+    /* --- THE FIX FOR SIZE --- */
+    font-size: 2.2em; /* Makes the icon significantly larger and easier to tap */
+    /* ---------------------- */
+    
     cursor: pointer;
     color: var(--text);
     padding: 0;
     margin-left: 10px;
 }
-/* --- END NEW --- */
 
 
 /* Hero */
