@@ -128,6 +128,7 @@ header nav a {
 }
 
 /* Responsive improvements for iPhones/Small Screens */
+/* Responsive improvements for iPhones/Small Screens */
 @media (max-width: 500px) {
     /* Hide desktop links */
     header nav a {
@@ -141,26 +142,31 @@ header nav a {
 
     /* When the "responsive" class is added via JavaScript, change the layout */
     nav.responsive {
-        flex-direction: column; /* Stack the items vertically */
+        /* Keep it as a column structure for the *dropdown links*, 
+           but we need to override the main header row alignment below */
+        flex-direction: column; 
         position: absolute;
         top: 100px; /* Adjust this value if your header height changes */
         
-        /* --- OPENS MENU ON THE LEFT --- */
+        /* OPENS MENU ON THE LEFT */
         left: 0; 
-        right: auto; /* Explicitly remove right anchor */
-        /* ------------------------------ */
-
+        right: auto;
+        
         background-color: var(--card);
         width: 100%;
         box-shadow: 0 8px 16px rgba(0,0,0,0.2);
         padding-bottom: 10px;
     }
+
+    /* --- FIX: Force the top-level items (logo and nav bar) back to a horizontal layout --- */
+    header {
+        flex-direction: row; 
+    }
+    /* ------------------------------------------------------------------------------------- */
     
     nav.responsive a {
         display: block; /* Make the hidden links visible */
-        /* --- ALIGNS TEXT LEFT --- */
         text-align: left;
-        /* ------------------------ */
         padding: 10px 20px;
         width: 100%;
     }
@@ -169,7 +175,7 @@ header nav a {
     nav.responsive #dark-toggle {
         display: block; 
         margin-right: 0px;
-        margin-left: auto; /* Push to the right edge of the header bar (still top right) */
+        margin-left: auto; /* Push to the right edge of the header bar */
     }
 
     /* Keep the waffle icon top-right, just to the left of the moon icon */
