@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Store - Layercraft Studio</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <header>
+        <h1 class="logo">
+            <a href="index.html">
+                <img src="./Logo/layercraft studio logo.png" class="header-logo" alt="Layercraft Studio Home">
+            </a>
+        </h1>
+    <nav>
+        <a href="index.html">Home</a>
+        <!-- Ensure this link points to your new store page -->
+        <a href="store.html">Store</a> 
+        <a href="contact.html">Contact</a>
+        <button id="dark-toggle">🌙</button>
+  </nav>
+</header>
+
+<main>
+    <!-- Add a simple title for clarity -->
+    <h2 style="text-align: center; margin-top: 40px; color: var(--text);">Our Products</h2>
+
+    <!-- This is the container for all your products -->
+    <div class="product-grid">
+
+        <!-- Product Card 1: Iron Man Mask (The one you have details for) -->
+        <div class="product-card" onclick="window.location.href='iron-mask-detail.html'">
+            <img src="./Images/ironman.png" alt="Iron Man Mask MK85">
+            <p>Iron Mask MK85</p>
+            <p class="price">£45.00</p>
+        </div>
+
+        <!-- Product Card 2: Example Product 2 (Add as many as you need) -->
+        <div class="product-card">
+            <img src="./images/bucky.png" alt="Bucky Arm">
+            <p>Bucky Arm</p>
+            <p class="price">£25.00</p>
+        </div>
+
+         <!-- Product Card 3: Example Product 3 -->
+        <div class="product-card">
+            <img src="./images/billy clubs.png" alt="Daredevil Billy Clubs">
+            <p>Daredevil Billy Clubs</p>
+            <p class="price">£36</p>
+        </div>
+
+         <!-- Product Card 4: Example Product 4 -->
+        <div class="product-card">
+            <img src="via.placeholder.com" alt="Product 4">
+            <p>Example Product Four</p>
+            <p class="price">£30.00</p>
+        </div>
+
+    </div>
+    <!-- End of Product Grid -->
+</main>
+
+
+<!-- Link to the script.js file with the dark mode logic -->
+<script src="script.js"></script>
+
+</body>
+</html>
